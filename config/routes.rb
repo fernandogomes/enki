@@ -11,6 +11,8 @@ Enki::Application.routes.draw do
     end
 
     match 'health(/:action)' => 'health', :action => 'index', :as => :health
+  
+    map.sitemap '/sitemap.xml', :controller => "sitemap", :action => "index"
 
     root :to => 'dashboard#show'
   end
